@@ -6,7 +6,6 @@ service = Service('C:\\Users\\aburn\\Downloads\\chromedriver_win32\\chromedriver
 
 def initiate_driver(url):
     """create driver with options"""
-    #URL = "https://automated.pythonanywhere.com/"
     options = webdriver.ChromeOptions()
     options.add_argument("disable-inforbars")
     options.add_argument("start-maximized")

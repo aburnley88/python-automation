@@ -1,4 +1,5 @@
 URL = "https://automated.pythonanywhere.com/login/"
+URL2 = "https://automated.pythonanywhere.com/"
 ID_ONE = "id_username"
 ID_TWO = "id_password"
 CRED = "automated"
