@@ -4,9 +4,9 @@ import time as t
 
 service = Service('C:\\Users\\aburn\\Downloads\\chromedriver_win32\\chromedriver.exe')
 
-def initiate_driver():
+def initiate_driver(url):
     """create driver with options"""
-    URL = "https://automated.pythonanywhere.com/"
+    #URL = "https://automated.pythonanywhere.com/"
     options = webdriver.ChromeOptions()
     options.add_argument("disable-inforbars")
     options.add_argument("start-maximized")
@@ -16,7 +16,7 @@ def initiate_driver():
     options.add_argument("disable-blink-features=AutomationControlled")
 
     driver = webdriver.Chrome(options=options)
-    driver.get(URL)
+    driver.get(url)
 
     return driver
 
@@ -34,13 +34,13 @@ def get_temperature_from_text(text):
     output = float(text.split(": ")[1])
     return output
 
-def main():
-    """createe instance of driver and scrape a dynamic value"""
-    driver = initiate_driver()
-    # pause script to allow dynamic value to load
-    t.sleep(2)
-    element = driver.find_element(by = "xpath", value = "/html/body/div[1]/div/h1[2]")
-    return get_temperature_from_text(element.text)
+# def main():
+#     """create instance of driver and scrape a dynamic value"""
+#     driver = initiate_driver()
+#     # pause script to allow dynamic value to load
+#     t.sleep(2)
+#     element = driver.find_element(by = "xpath", value = "/html/body/div[1]/div/h1[2]")
+#     return get_temperature_from_text(element.text)
 
-if __name__ == "__main__":
-    print(main())
+# if __name__ == "__main__":
+#     print(main())
