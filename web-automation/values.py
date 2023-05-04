@@ -1,0 +1,7 @@
+URL = "https://automated.pythonanywhere.com/login/"
+ID_ONE = "id_username"
+ID_TWO = "id_password"
+CRED = "automated"
+BY_ONE = "id"
+BY_TWO = "xpath"
+TO_SCRAPE = "/html/body/div[1]/div/h1[2]"

@@ -34,13 +34,9 @@ def get_temperature_from_text(text):
     output = float(text.split(": ")[1])
     return output
 
-# def main():
-#     """create instance of driver and scrape a dynamic value"""
-#     driver = initiate_driver()
-#     # pause script to allow dynamic value to load
-#     t.sleep(2)
-#     element = driver.find_element(by = "xpath", value = "/html/body/div[1]/div/h1[2]")
-#     return get_temperature_from_text(element.text)
-
-# if __name__ == "__main__":
-#     print(main())
+def scrape_dynamic(driver):
+    """scrape a dynamic value"""
+    # pause script to allow dynamic value to load
+    t.sleep(2)
+    element = driver.find_element(by = "xpath", value = "/html/body/div[1]/div/h1[2]")
+    return get_temperature_from_text(element.text)
